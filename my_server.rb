@@ -1,4 +1,4 @@
-require 'rack'
+
 
 class MyServer
     def call(env)
@@ -6,8 +6,7 @@ class MyServer
     end
   
     def pretty_response
-      (Time.now.to_i % 2).zero? ?  ["<em>Hello, Dan</em>"] : ["<strong>You Are The Man!</strong>"]
+      (Time.now.to_i % 2).zero? ?  ["<em>Hello</em>"] : ["<strong>Hello</strong>"]
     end
   end
   
-  run MyServer.new
